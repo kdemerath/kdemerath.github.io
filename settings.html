@@ -65,7 +65,7 @@
 			$("#"+[key]).val(obj[key]);
 			$("#"+[key]).val(obj[key]).slider("refresh");       
 		}*/
-		$("#userId").val(window.location.search);
-		$("#userId").val(window.location.search).slider("refresh");
+		$("#userId").val(decodeURIComponent(window.location.search));
+		$("#userId").val(decodeURIComponent(window.location.search)).slider("refresh");
 	</script>
 </html>
