@@ -2,8 +2,6 @@
 <html>
 	<head>
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
 	</head>
 	<body>
 		<h1>Habitica-Tasks Options</h1>
@@ -38,36 +36,5 @@
 	      			<!--//document.location = location;-->
 	    			},
   			false);
-  			
-		/*function updateSettings() {
-			if (window.location.search) {
-				var settings = decodeURIComponent(window.location.search).replace('?settings=','');
-				if (settings == "null") {
-					settings = '{"userId":"replace this with your User ID","apiToken":"replace this with your API Token"}';
-				}
-				if (settings) {
-					var json = $.parseJSON(settings);
-					if (json.userId) {
-						$('#userId').val(json.userId);
-					}
-					if (json.apiToken) {
-						$('#apiToken').val(json.apiToken);
-					}
-      				}
-    			}
-  		}
-  		
-  		$('#main').bind('pageinit', updateSettings);*/
-  		
-		//Set form values to whatever is passed in.
-		/*var obj = jQuery.parseJSON(decodeURIComponent(window.location.search.substring(1)));
-		for(key in obj) {
-			$("#"+[key]).val(obj[key]);
-			$("#"+[key]).val(obj[key]).slider("refresh");       
-		}*/
-		$("#userId").val(window.location.search);
-		$("#userId").val(window.location.search).slider("refresh");
-		var apiToken = document.getElementById("apiToken");
-		apiToken.value = "test";
 	</script>
 </html>
