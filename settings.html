@@ -39,7 +39,7 @@
 	    			},
   			false);
   			
-		function updateSettings() {
+		/*function updateSettings() {
 			if (window.location.search) {
 				var settings = decodeURIComponent(window.location.search).replace('?settings=','');
 				if (settings == "null") {
@@ -57,7 +57,7 @@
     			}
   		}
   		
-  		//$('#main').bind('pageinit', updateSettings);
+  		$('#main').bind('pageinit', updateSettings);*/
   		
 		//Set form values to whatever is passed in.
 		var obj = jQuery.parseJSON(decodeURIComponent(window.location.search.substring(1)));
