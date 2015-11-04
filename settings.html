@@ -49,9 +49,9 @@
 			function() {	
 				var options = saveOptions();
 				// Set the return URL depending on the runtime environment
-				var return_to = getQueryParam('return_to', 'pebblejs://close#');
-				//location.href = "pebblejs://close#" + encodeURIComponent(JSON.stringify(options));
-				location.href = return_to + encodeURIComponent(JSON.stringify(options));
+				//var return_to = getQueryParam('return_to', 'pebblejs://close#');
+				//location.href = return_to + encodeURIComponent(JSON.stringify(options));
+				location.href = "pebblejs://close#" + encodeURIComponent(JSON.stringify(options));
 				<!--//document.location = location;-->
 			},
 			false);
