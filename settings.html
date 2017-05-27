@@ -29,11 +29,14 @@
 				}
 				if (settings) {
 					var json = $.parseJSON(settings);
-					if (json.banner) {
-						$('#banner').val(json.banner);
+					if (json.userId) {
+						$('#userId').val(json.userId);
 					}
-					if (json.weekday) {
-						$('#weekday').val(json.weekday).slider('refresh');
+					if (json.apiToken) {
+						$('#apiToken').val(json.apiToken);
+					}
+					if (json.apiToken) {
+						$('#apiToken').val(json.weekday).slider('refresh');
 					}
 					if (json.footer) {
 						$('#footer').val(json.footer).selectmenu('refresh');
