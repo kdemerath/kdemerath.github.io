@@ -7,8 +7,9 @@
 	</head>
 	<body>
 		<h1>Habitica-Tasks Options</h1>
-		<p>v1.10(2)</p>
+		<p>v1.10(3)</p>
 		<p>User authentication</p>
+		<p>Get your User ID and API Token from here: <a href="https://habitica.com/#/options/settings/api">https://habitica.com/#/options/settings/api</a><p>
 		<label for="userId">User ID:
 			<input id="userId">
 		</label>
@@ -25,7 +26,7 @@
 			if (window.location.search) {
 				var settings = decodeURIComponent(window.location.search).replace('?settings=','');
 				if (settings == "null") {
-					settings = '{"banner":"Hello World","weekday":"y","showdate":true,"footer":"03"}';
+					settings = '{"userId":"Enter your user ID here"}';
 				}
 				if (settings) {
 					var json = $.parseJSON(settings);
