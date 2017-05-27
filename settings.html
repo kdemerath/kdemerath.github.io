@@ -7,7 +7,7 @@
 	</head>
 	<body>
 		<h1>Habitica-Tasks Options</h1>
-		<p>v1.10(12)</p>
+		<p>v1.10(13)</p>
 		<p>User authentication</p>
 		<p>Get your User ID and API Token from here: <a href="https://habitica.com/#/options/settings/api">https://habitica.com/#/options/settings/api</a><p>
 		<label for="userId">User ID:
@@ -27,7 +27,6 @@
 	
 	<script>
 		function updateSettings() {
-			$('#test').val('test1');
 			if (window.location) {
 				var settings = decodeURIComponent(window.location).slice(decodeURIComponent(window.location).indexOf('#') + 1);
 				if (settings == "null") {
@@ -47,7 +46,7 @@
 					if (json.footer) {
 						$('#footer').val(json.footer).selectmenu('refresh');
 					}
-					$('#test').val('test2');
+					$('#test').val(settings);
 					//$("#showdate").prop('checked',json.showdate).checkboxradio('refresh');
 	      			}
 	    		}
