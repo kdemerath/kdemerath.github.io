@@ -7,7 +7,7 @@
 	</head>
 	<body>
 		<h1>Habitica-Tasks Options</h1>
-		<p>v1.10(14)</p>
+		<p>v1.10(15)</p>
 		<p>User authentication</p>
 		<p>Get your User ID and API Token from here: <a href="https://habitica.com/#/options/settings/api">https://habitica.com/#/options/settings/api</a><p>
 		<label for="userId">User ID:
@@ -16,10 +16,6 @@
 		<br>
 		<label for="apiToken">API Token:
 			<input id="apiToken">
-		</label>
-    		<br>
-		<label for="test">Test:
-			<input id="test">
 		</label>
     		<br><br>
 		<button type="submit" data-theme="a" id="b-submit">Submit</button>
@@ -40,14 +36,6 @@
 					if (json.apiToken) {
 						$('#apiToken').val(json.apiToken);
 					}
-					if (json.asdf) {
-						$('#asdf').val(json.weekday).slider('refresh');
-					}
-					if (json.footer) {
-						$('#footer').val(json.footer).selectmenu('refresh');
-					}
-					$('#test').val(json);
-					//$("#showdate").prop('checked',json.showdate).checkboxradio('refresh');
 	      			}
 	    		}
 	  	}
