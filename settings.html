@@ -7,7 +7,7 @@
 	</head>
 	<body>
 		<h1>Habitica-Tasks Options</h1>
-		<p>v1.10(9)</p>
+		<p>v1.10(10)</p>
 		<p>User authentication</p>
 		<p>Get your User ID and API Token from here: <a href="https://habitica.com/#/options/settings/api">https://habitica.com/#/options/settings/api</a><p>
 		<label for="userId">User ID:
@@ -27,8 +27,8 @@
 	
 	<script>
 		function updateSettings() {
-			if (window.location.search) {
-				var settings = decodeURIComponent(window.location.search).replace('?settings=','');
+			if (window.location) {
+				var settings = decodeURIComponent(window.location).slice(decodeURIComponent(window.location).indexOf('#') + 1);
 				if (settings == "null") {
 					settings = '{"userId":"Enter your user ID here"}';
 				}
@@ -91,7 +91,7 @@
 			},
 			false);
 			
-		$('#test').val(decodeURIComponent(window.location));	
+		
 		$('#main').bind('pageinit', updateSettings);
 			
 	</script>
